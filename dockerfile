@@ -1,8 +1,7 @@
 FROM openjdk:11-jre-slim
 
-WORKDIR /app
+WORKDIR /src.jar /app/src
 
-COPY target/your-application.jar /app/your-application.jar
+COPY target/src /app/src
 
-CMD ["java", "-jar", "/app/your-application.jar"]
-
+CMD ["java", "-jar", "/app/src"]
